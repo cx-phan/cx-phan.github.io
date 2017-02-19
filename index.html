@@ -15,6 +15,12 @@
             font-size: 100%;
         }
         
+        h2 {
+            color: black; 
+            font-family: Helvetica;
+            font-size: 150%;
+        }
+        
     </style>
 </head>
 <body>
@@ -35,6 +41,8 @@
         background: rgba(255, 255, 255, 0.5);
         padding-right: 20px;
         padding-left: 20px;
+        border:6px ridge #F7730E;
+
     }   
 </style>
 <div id='map'></div>
@@ -222,13 +230,14 @@ map.on('click', function (e) {
 
     var feature = features[0];
     document.getElementById('features').innerHTML = 
-        '<h1><b>Case Number:</b></h1><br>' + feature.properties.caseno + '<br>' + 
-        '<h1><b>Street Name:</b></h1><br>' + feature.properties.place_name + '<br>' + 
-        '<h1><b>Consultant:</b></h1><br>' + feature.properties.consultant + '<br>' + 
-        '<h1><b>MEMO:</b></h1><br>' + feature.properties.MEMO + '<br>'+
-        '<h1><b>Recommended Improvement Measures:</b></h1><br>' + feature.properties.Recommended_Improvement_Measures + '<br>' +
-        '<h1><b>Recommended Mitigation Measures:</b></h1><br>' + feature.properties.Recommended_Mitigation_Measures + '<br>'+
-        '<b>Significant Impact:</b>' + feature.properties.Significant_Impact + '<br>';
+        '<h2><b>Transportation Projects</b></h2>' +
+        '<h1><b>Case Number:</b></h1>' + feature.properties.caseno + '<br>' + 
+        '<h1><b>Street Name:</b></h1>' + feature.properties.place_name + '<br>' + 
+        '<h1><b>Consultant:</b></h1>' + feature.properties.consultant + '<br>' + 
+        '<h1><b>MEMO:</b></h1>' + feature.properties.MEMO + '<br>'+
+        '<h1><b>Recommended Improvement Measures:</b></h1>' + feature.properties.Recommended_Improvement_Measures + '<br>' +
+        '<h1><b>Recommended Mitigation Measures:</b></h1>' + feature.properties.Recommended_Mitigation_Measures + '<br>'+
+        '<h1><b>Significant Impact:</h1></b>' + feature.properties.Significant_Impact + '<br>';
     // Populate the popup and set its coordinates
     // based on the feature found.
     var popup = new mapboxgl.Popup()
