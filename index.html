@@ -9,6 +9,12 @@
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
+        h1 {
+            color: gray;
+            font-family: verdana;
+            font-size: 200%;
+        }
+        
     </style>
 </head>
 <body>
@@ -216,7 +222,7 @@ map.on('click', function (e) {
 
     var feature = features[0];
     document.getElementById('features').innerHTML = 
-        '<b>Case Number:</b>' + feature.properties.caseno + '<br><br>' + 
+        '<p><b>Case Number:</b></p>' + feature.properties.caseno + '<br><br>' + 
         '<b>Street Name:</b>' + feature.properties.place_name + '<br><br>' + 
         '<b>Consultant:</b>' + feature.properties.consultant + '<br><br>' + 
         '<b>MEMO:</b>' + feature.properties.MEMO + '<br><br>'+
