@@ -24,6 +24,7 @@
         max-width: 400px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
+    
     #features {
         position: absolute;
         top: 200px;
@@ -32,10 +33,9 @@
         width: 400px;
         overflow: auto;
         background: rgba(255, 255, 255, 0.5);
-    }
-    #map canvas {
-        cursor: crosshair;
-    }
+        padding-right: 20px;
+        padding-left: 20px;
+    }   
 </style>
 <div id='map'></div>
 <pre id='features'></pre>
@@ -222,12 +222,12 @@ map.on('click', function (e) {
 
     var feature = features[0];
     document.getElementById('features').innerHTML = 
-        '<p><b>Case Number:</b></p>' + feature.properties.caseno + '<br><br>' + 
-        '<b>Street Name:</b>' + feature.properties.place_name + '<br><br>' + 
-        '<b>Consultant:</b>' + feature.properties.consultant + '<br><br>' + 
-        '<b>MEMO:</b>' + feature.properties.MEMO + '<br><br>'+
-        '<b>Recommended Improvement Measures:</b>' + feature.properties.Recommended_Improvement_Measures + '<br><br>' +
-        '<b>Recommended Mitigation Measures:</b>' + feature.properties.Recommended_Mitigation_Measures + '<br><br>'+
+        '<h1><b>Case Number:</b></h1><br>' + feature.properties.caseno + '<br><br>' + 
+        '<h1><b>Street Name:</b></h1><br>' + feature.properties.place_name + '<br><br>' + 
+        '<h1><b>Consultant:</b></h1><br>' + feature.properties.consultant + '<br><br>' + 
+        '<h1><b>MEMO:</b></h1><br>' + feature.properties.MEMO + '<br><br>'+
+        '<h1><b>Recommended Improvement Measures:</b></h1><br>' + feature.properties.Recommended_Improvement_Measures + '<br><br>' +
+        '<h1><b>Recommended Mitigation Measures:</b></h1><br>' + feature.properties.Recommended_Mitigation_Measures + '<br><br>'+
         '<b>Significant Impact:</b>' + feature.properties.Significant_Impact + '<br><br>';
     // Populate the popup and set its coordinates
     // based on the feature found.
