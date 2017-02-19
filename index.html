@@ -215,7 +215,8 @@ map.on('click', function (e) {
     }
 
     var feature = features[0];
-    document.getElementById('features').innerHTML = 'Case Number:' + feature.properties.caseno;
+    document.getElementById('features').innerHTML = 
+        '<b>Case Number:</b>' + feature.properties.caseno + '<br>';
     // Populate the popup and set its coordinates
     // based on the feature found.
     var popup = new mapboxgl.Popup()
