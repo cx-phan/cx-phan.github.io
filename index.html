@@ -153,7 +153,7 @@ map.on('load', function () {
                   "properties": {
                     "place_name": "1515 S Van Ness Ave, San Francisco, California 94110, United States",
                     "MEMO": "TIS",
-                    "Significant Impact": "No ",
+                    "Significant_Impact": "No ",
                     "Consultant": "Fehr & Peers",
                     "Recommended_Improvement_Measures": "\"Improvement Measure TR-2: Queue Abatement Conditions of Approval The owner/operator of the off-street parking facility shall ensure that recurring vehicle queues do not occur on the public right-of-way. A vehicle queue is defined as one or more vehicles (destined for the parking facility) blocking any portion of any public street, alley or sidewalk for a consecutive period of three minutes or longer on a daily or weekly basis. If a recurring queue occurs, the owner/operator of the parking facility shall employ abatement methods as needed to abate the queue. Suggested abatement methods include but are not limited to the following: redesign of facility to improve vehicle circulation and/or on-site queue capacity; employment of parking attendants; use of valet parking or other space-efficient parking techniques; use of off-site parking facilities or shared parking with nearby uses; use of parking occupancy sensors and signage directing drivers to available spaces; or travel demand management strategies such as additional bicycle parking. If the Planning Director, or his or her designee, suspects that a recurring queue is present, the Planning Department shall notify the property owner in writing. Upon request, the owner/operator shall hire a qualified transportation consultant to evaluate the conditions at the site for no less than seven days. The consultant shall prepare a monitoring report to be submitted to the Planning Department for review. If the Planning Department determines that a recurring queue does exist, the facility owner/operator shall have 90 days from the date of the written determination to abate the queue.\"",
                     "Recommended_Mitigation_Measures": "",
@@ -233,7 +233,7 @@ map.on('click', function (e) {
         '<h2><b>Transportation Projects</b></h2>' +
         '<h1><b>Case Number:</b></h1>' + feature.properties.caseno + '<br>' + 
         '<h1><b>Street Name:</b></h1>' + feature.properties.place_name + '<br>' + 
-        '<h1><b>Consultant:</b></h1>' + feature.properties.consultant + '<br>' + 
+        '<h1><b>Consultant:</b></h1>' + feature.properties.Consultant + '<br>' + 
         '<h1><b>MEMO:</b></h1>' + feature.properties.MEMO + '<br>'+
         '<h1><b>Recommended Improvement Measures:</b></h1>' + feature.properties.Recommended_Improvement_Measures + '<br>' +
         '<h1><b>Recommended Mitigation Measures:</b></h1>' + feature.properties.Recommended_Mitigation_Measures + '<br>'+
