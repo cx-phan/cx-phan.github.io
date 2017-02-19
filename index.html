@@ -11,15 +11,12 @@
 </style>
 </head>
 <body>
-<div id='map'></div>
+<div id='map' style='width: 400px; height: 300px;'></div>
 <script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiY3hwaGFuIiwiYSI6ImNpemJ6czRmeTE0aGYycXA5bjZvaWI3eGQifQ.KLTC3DWWhYnYcrp3nql-Sw';
+mapboxgl.accessToken = 'pk.eyJ1IjoiY3hwaGFuIiwiYSI6ImNpemJ6czRmeTE0aGYycXA5bjZvaWI3eGQifQ.KLTC3DWWhYnYcrp3nql-Sw';
 var map = new mapboxgl.Map({
-  container: 'map',
-  center: [-122.420679, 37.772537],
-  zoom: 13,
-  style: style_object,
-  hash: true
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9'
 });
 </script>
 </body>
