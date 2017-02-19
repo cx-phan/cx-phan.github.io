@@ -163,7 +163,7 @@ map.on('load', function () {
                     "Recommended Improvement Measures": "",
                     "Recommended Mitigation Measures": "",
                     "Significant Impact": "No",
-                    "CASE#": "2014.1121E"
+                    "caseno": "2014.1121E"
                   },
                   "geometry": {
                     "coordinates": [
@@ -215,7 +215,7 @@ map.on('click', function (e) {
     }
 
     var feature = features[0];
-    document.getElementById('features').innerHTML =  'Hi';
+    document.getElementById('features').innerHTML = 'Case Number:' + feature.properties.caseno;
     // Populate the popup and set its coordinates
     // based on the feature found.
     var popup = new mapboxgl.Popup()
