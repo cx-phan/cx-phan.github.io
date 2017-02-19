@@ -18,9 +18,9 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiY3hwaGFuIiwiYSI6ImNpemJ6czRmeTE0aGYycXA5bjZvaWI3eGQifQ.KLTC3DWWhYnYcrp3nql-Sw';
 var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
-    center: [-122.4194, 37.77], // starting position
-    zoom: 5 // starting zoom
+    style: 'mapbox://styles/mapbox/light-v9', //stylesheet location
+    center: [-122.4194, 37.77], // starting position, San Francisco
+    zoom: 9 // starting zoom
 });
 map.on('load', function () {
     map.addLayer({
@@ -34,8 +34,8 @@ map.on('load', function () {
                 {
                   "type": "Feature",
                   "properties": {
-                    "title": "2015-001314ENV",
-                    "icon": "harbor",
+                    "title": "CASE #: 2015-001314ENV",
+                    "icon": "a.icon-halo",
                   },
                   "geometry": {
                     "coordinates": [-122.42584, 37.759839],
@@ -43,6 +43,29 @@ map.on('load', function () {
                   },
                   "id": "0d8a3e5b17dd26efc63b5e516e298490"
                 }, {
+                  "type": "Feature",
+                  "properties": {
+                      "title":"2014-001272ENV", 
+                      "icon": "icon-halo",
+                    "place_name": "70 Pier, San Francisco, California 94111, United States",
+                    "MEMO": "TIS",
+                    "Significant Impact": "Yes",
+                    "Consultant": "Fehr&Peers",
+                    "Recommended Mitigation Measures": "\"Mitigation Measure TR-2: Improve Pedestrian Facilities at Adjacent Streets to Project As part of Project construction, install ADA curb ramps, continental crosswalks, pedestrian signals and/or other pedestrian safety solutions at the intersection of 22nd Street and Illinois Street and the intersection of 20th Street and Illinois Street and widen the sidewalk between 22nd Street and 20th Street on the east side of Illinois Street to ten feet, minimum. The relocation of obstructions such as fire hydrants and power poles should be considered (if feasible) to ensure an accessible path of travel is provided to and from the Project.\"",
+                    "Recommended Improvement Measures": "",
+                    "CASE #": "2014-001272ENV"
+                  },
+                  "geometry": {
+                    "coordinates": [
+                      -122.392977,
+                      37.794058
+                    ],
+                    "type": "Point"
+                  },
+                  "id": "37ab22d4fd8aec4b0f8f4cb5cd940526"
+                },
+
+                    {
                     "type": "Feature",
                     "geometry": {
                         "type": "Point",
@@ -64,6 +87,12 @@ map.on('load', function () {
         }
     });
 }); 
+    
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['symbols'] });
+    map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+});
+    
 </script>
 
 </body>
