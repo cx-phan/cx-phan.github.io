@@ -18,8 +18,22 @@
         max-width: 400px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
+    #features {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        overflow: auto;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    #map canvas {
+        cursor: crosshair;
+    }
 </style>
 <div id='map'></div>
+<pre id='features'></pre>
+    
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiY3hwaGFuIiwiYSI6ImNpemJ6czRmeTE0aGYycXA5bjZvaWI3eGQifQ.KLTC3DWWhYnYcrp3nql-Sw';
 
@@ -201,7 +215,7 @@ map.on('click', function (e) {
     }
 
     var feature = features[0];
-
+    document.getElementById('features').innerHTML =  'Hi';
     // Populate the popup and set its coordinates
     // based on the feature found.
     var popup = new mapboxgl.Popup()
