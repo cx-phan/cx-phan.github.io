@@ -31,7 +31,7 @@
         right: 0;
         bottom: 0;
         width: 400px;
-        overflow: auto;
+        overflow: ellipsis;
         background: rgba(255, 255, 255, 0.5);
         padding-right: 20px;
         padding-left: 20px;
@@ -222,13 +222,13 @@ map.on('click', function (e) {
 
     var feature = features[0];
     document.getElementById('features').innerHTML = 
-        '<h1><b>Case Number:</b></h1><br>' + feature.properties.caseno + '<br><br>' + 
-        '<h1><b>Street Name:</b></h1><br>' + feature.properties.place_name + '<br><br>' + 
-        '<h1><b>Consultant:</b></h1><br>' + feature.properties.consultant + '<br><br>' + 
-        '<h1><b>MEMO:</b></h1><br>' + feature.properties.MEMO + '<br><br>'+
-        '<h1><b>Recommended Improvement Measures:</b></h1><br>' + feature.properties.Recommended_Improvement_Measures + '<br><br>' +
-        '<h1><b>Recommended Mitigation Measures:</b></h1><br>' + feature.properties.Recommended_Mitigation_Measures + '<br><br>'+
-        '<b>Significant Impact:</b>' + feature.properties.Significant_Impact + '<br><br>';
+        '<h1><b>Case Number:</b></h1><br>' + feature.properties.caseno + '<br>' + 
+        '<h1><b>Street Name:</b></h1><br>' + feature.properties.place_name + '<br>' + 
+        '<h1><b>Consultant:</b></h1><br>' + feature.properties.consultant + '<br>' + 
+        '<h1><b>MEMO:</b></h1><br>' + feature.properties.MEMO + '<br>'+
+        '<h1><b>Recommended Improvement Measures:</b></h1><br>' + feature.properties.Recommended_Improvement_Measures + '<br>' +
+        '<h1><b>Recommended Mitigation Measures:</b></h1><br>' + feature.properties.Recommended_Mitigation_Measures + '<br>'+
+        '<b>Significant Impact:</b>' + feature.properties.Significant_Impact + '<br>';
     // Populate the popup and set its coordinates
     // based on the feature found.
     var popup = new mapboxgl.Popup()
