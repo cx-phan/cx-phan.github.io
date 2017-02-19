@@ -45,15 +45,8 @@ map.on('load', function () {
                 }, {
                   "type": "Feature",
                   "properties": {
-                      "title":"2014-001272ENV", 
+                      "title":"CASE #: 2014-001272ENV", 
                       "icon": "icon-halo",
-                    "place_name": "70 Pier, San Francisco, California 94111, United States",
-                    "MEMO": "TIS",
-                    "Significant Impact": "Yes",
-                    "Consultant": "Fehr&Peers",
-                    "Recommended Mitigation Measures": "\"Mitigation Measure TR-2: Improve Pedestrian Facilities at Adjacent Streets to Project As part of Project construction, install ADA curb ramps, continental crosswalks, pedestrian signals and/or other pedestrian safety solutions at the intersection of 22nd Street and Illinois Street and the intersection of 20th Street and Illinois Street and widen the sidewalk between 22nd Street and 20th Street on the east side of Illinois Street to ten feet, minimum. The relocation of obstructions such as fire hydrants and power poles should be considered (if feasible) to ensure an accessible path of travel is provided to and from the Project.\"",
-                    "Recommended Improvement Measures": "",
-                    "CASE #": "2014-001272ENV"
                   },
                   "geometry": {
                     "coordinates": [
@@ -87,7 +80,14 @@ map.on('load', function () {
         }
     });
 }); 
-    
+
+map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['symbols'] });
+    if (features.length) {
+        // Get coordinates from the symbol and center the map on those coordinates
+        map.flyTo({center: features[0].geometry.coordinates});
+    }
+});
 map.on('mousemove', function (e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['symbols'] });
     map.getCanvas().style.cursor = features.length ? 'pointer' : '';
