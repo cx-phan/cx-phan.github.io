@@ -63,7 +63,7 @@ map.on('load', function () {
                     "Consultant": "CHS Consulting Group",
                     "Recommended Improvement Measures": "",
                     "Recommended Mitigation Measures": "",
-                    "CASE#": "2015-001314ENV"
+                    "caseno": "2015-001314ENV"
                   },
                   "geometry": {
                     "coordinates": [
@@ -83,7 +83,7 @@ map.on('load', function () {
                     "Consultant": "Fehr&Peers",
                     "Recommended Mitigation Measures": "\"Mitigation Measure TR-2: Improve Pedestrian Facilities at Adjacent Streets to Project As part of Project construction, install ADA curb ramps, continental crosswalks, pedestrian signals and/or other pedestrian safety solutions at the intersection of 22nd Street and Illinois Street and the intersection of 20th Street and Illinois Street and widen the sidewalk between 22nd Street and 20th Street on the east side of Illinois Street to ten feet, minimum. The relocation of obstructions such as fire hydrants and power poles should be considered (if feasible) to ensure an accessible path of travel is provided to and from the Project.\"",
                     "Recommended Improvement Measures": "",
-                    "CASE#": "2014-001272ENV"
+                    "caseno": "2014-001272ENV"
                   },
                   "geometry": {
                     "coordinates": [
@@ -103,7 +103,7 @@ map.on('load', function () {
                     "Consultant": "ESA",
                     "Recommended Improvement Measures": "",
                     "Recommended Mitigation Measures": "",
-                    "CASE#": "2011.1323!"
+                    "caseno": "2011.1323!"
                   },
                   "geometry": {
                     "coordinates": [
@@ -123,7 +123,7 @@ map.on('load', function () {
                     "Recommended Improvement Measures": "",
                     "Recommended Mitigation Measures": "",
                     "Significant Impact": "No",
-                    "CASE#": "2014.0484!"
+                    "caseno": "2014.0484!"
                   },
                   "geometry": {
                     "coordinates": [
@@ -143,7 +143,7 @@ map.on('load', function () {
                     "Consultant": "Fehr & Peers",
                     "Recommended Improvement Measures": "\"Improvement Measure TR-2: Queue Abatement Conditions of Approval The owner/operator of the off-street parking facility shall ensure that recurring vehicle queues do not occur on the public right-of-way. A vehicle queue is defined as one or more vehicles (destined for the parking facility) blocking any portion of any public street, alley or sidewalk for a consecutive period of three minutes or longer on a daily or weekly basis. If a recurring queue occurs, the owner/operator of the parking facility shall employ abatement methods as needed to abate the queue. Suggested abatement methods include but are not limited to the following: redesign of facility to improve vehicle circulation and/or on-site queue capacity; employment of parking attendants; use of valet parking or other space-efficient parking techniques; use of off-site parking facilities or shared parking with nearby uses; use of parking occupancy sensors and signage directing drivers to available spaces; or travel demand management strategies such as additional bicycle parking. If the Planning Director, or his or her designee, suspects that a recurring queue is present, the Planning Department shall notify the property owner in writing. Upon request, the owner/operator shall hire a qualified transportation consultant to evaluate the conditions at the site for no less than seven days. The consultant shall prepare a monitoring report to be submitted to the Planning Department for review. If the Planning Department determines that a recurring queue does exist, the facility owner/operator shall have 90 days from the date of the written determination to abate the queue.\"",
                     "Recommended Mitigation Measures": "",
-                    "CASE#": "2014.1020E"
+                    "caseno": "2014.1020E"
                   },
                   "geometry": {
                     "coordinates": [
@@ -183,7 +183,7 @@ map.on('load', function () {
                     "Recommended Improvement Measures": "",
                     "Recommended Mitigation Measures": "",
                     "Significant Impact": "No",
-                    "CASE#": "2013.1753!"
+                    "caseno": "2013.1753!"
                   },
                   "geometry": {
                     "coordinates": [
@@ -220,7 +220,7 @@ map.on('click', function (e) {
     // based on the feature found.
     var popup = new mapboxgl.Popup()
         .setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.properties.CASE#)
+        .setHTML(feature.properties.caseno)
         .addTo(map);
 });
 
