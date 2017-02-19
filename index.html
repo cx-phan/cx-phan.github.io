@@ -36,7 +36,7 @@
         top: 250px;
         right: 0;
         bottom: 0;
-        width: 450px;
+        width: 200px;
         overflow: scroll;
         background: rgba(255, 255, 255, 0.5);
         padding-right: 20px;
@@ -95,7 +95,7 @@ map.on('load', function () {
                     "MEMO": "TIS",
                     "Significant_Impact": "Yes",
                     "Consultant": "Fehr&Peers",
-                    "Recommended_Mitigation_Measures": "\"Mitigation Measure TR-2: Improve Pedestrian Facilities at Adjacent Streets to Project As part of Project construction, install ADA curb ramps, continental crosswalks, pedestrian signals and/or other pedestrian safety solutions at the intersection of 22nd Street and Illinois Street and the intersection of 20th Street and Illinois Street and widen the sidewalk between 22nd Street and 20th Street on the east side of Illinois Street to ten feet, minimum. The relocation of obstructions such as fire hydrants and power poles should be considered (if feasible) to ensure an accessible path of travel is provided to and from the Project.\"",
+                    "Recommended_Mitigation_Measures": "Mitigation Measure TR-2: Improve Pedestrian Facilities at Adjacent Streets to Project As part of Project construction, install ADA curb ramps, continental crosswalks, pedestrian signals and/or other pedestrian safety solutions at the intersection of 22nd Street and Illinois Street and the intersection of 20th Street and Illinois Street and widen the sidewalk between 22nd Street and 20th Street on the east side of Illinois Street to ten feet, minimum. The relocation of obstructions such as fire hydrants and power poles should be considered (if feasible) to ensure an accessible path of travel is provided to and from the Project.\"",
                     "Recommended_Improvement_Measures": "",
                     "caseno": "2014-001272ENV"
                   },
@@ -212,7 +212,7 @@ map.on('load', function () {
             }
         },
         "layout": {
-            "icon-image": "star-15",
+            "icon-image": "circle-15",
             "icon-allow-overlap": true
         }
     });
@@ -238,6 +238,7 @@ map.on('click', function (e) {
         '<h1><b>Recommended Improvement Measures:</b></h1>' + feature.properties.Recommended_Improvement_Measures + '<br>' +
         '<h1><b>Recommended Mitigation Measures:</b></h1>' + feature.properties.Recommended_Mitigation_Measures + '<br>'+
         '<h1><b>Significant Impact:</h1></b>' + feature.properties.Significant_Impact + '<br>';
+    
     // Populate the popup and set its coordinates
     // based on the feature found.
     var popup = new mapboxgl.Popup()
