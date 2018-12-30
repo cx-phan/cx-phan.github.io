@@ -13,29 +13,42 @@ body, h2,h3,h4,h5 {font-family: "Rubik", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
-</style>
+img {
+  border-radius: 50%;
+}
+a:hover {
+  background-color: gray;
+  color:white;
+}
 
+/* selected link */
+a:active {
+  color: blue;
+}
+
+</style>
 
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><b>Chris<br>Phan</b></h3>
   </div>
   <div class="w3-bar-block">
-    <center><img src= "https://i.ibb.co/khg5dRN/IMG-0950.jpg"></center>
+    <center><img src= "https://i.ibb.co/nBJ39vB/IMG-0733.jpg" width = 150></center>
+    <center>
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="https://drive.google.com/file/d/1B66-3OGtPPRt5fSCz316IopnkeDHygqz/view?usp=sharing onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Resume</a> 
+    <a href="https://drive.google.com/file/d/1B66-3OGtPPRt5fSCz316IopnkeDHygqz/view?usp=sharing" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Resume</a> 
     <a href="https://www.linkedin.com/in/christine-phan-b624a3b0/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">LinkedIn</a> 
-    <a href="https://twitter.com/thecxphan" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Twitter</a> 
+    <a href="https://twitter.com/thecxphan" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Twitter</a> </center>
   </div>
 </nav>
 
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
   <span>Chris Phan</span>
 </header>
 
@@ -48,8 +61,8 @@ body {font-size:16px;}
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Chris Phan</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>About Me</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>About Me</b></h1>
+    <hr style="width:50px;border:5px solid blue" class="w3-round">
   </div>
   
   <!-- Photo grid (modal) -->
@@ -57,7 +70,7 @@ body {font-size:16px;}
     <div class="w3-half">
     </div>
     <p>
-    Hi there! I’m Chris Phan, a computer scientist, data analyst, and urbanist based on the SF Bay Area who spends my time contributing to ways to make spaces, communities and environments equitable and livable for all, especially through the lens of technology, data and research. </p>
+    Hi there! I’m Chris Phan, a computer scientist, data analyst, and urbanist based in the SF Bay Area who spends my time contributing to ways to make spaces, communities and environments equitable and livable for all, especially through the lens of technology, data and research. </p>
 
     <p>
 This past summer, I worked at <a href ="https://www.rmi.org/"> Rocky Mountain Institute</a> in Basalt, Colorado as a research associate. Using my prior transportation background, I developed a city transportation interactive model to assist with the <a href = "https://rmi.org/our-work/global-energy-transitions/india-program/solutions-workshop/pune-solutions-workshop/">Pune Solutions Workshop</a> that the <a href="https://www.rmi.org/our-work/global-energy-transitions/india-program/">India Mobility Team</a> co-hosted with <a href = "https://www.niti.gov.in/">NITI Aayog</a> in October 2018. This model drew from prior work at RMI, data on India’s existing urban transportation environment, and predictions on population growth rate, transportation demand, and the evolution of urban density. This model helped target potential transportation solutions by further providing case studies of alternative transportation examples around the world, through the <a href="https://rmi.org/our-work/global-energy-transitions/india-program/handbook-mobility-solutions-for-indian-cities/">City Handbook </a>, which I also researched and assisted in writing. </p> 
@@ -65,9 +78,9 @@ This past summer, I worked at <a href ="https://www.rmi.org/"> Rocky Mountain In
 I’ve spent more of my time researching urbanism and global challenges in various locations, such as 
 <ul>
   <li>The Urban Institute: Center for International Governance and Development</li>
-  <li>Hong Kong: Human Cities Initiative 2017</li>
+  <li><a href="http://www.humancityworkshop.org/2017-workshop.html">Hong Kong: Human Cities Initiative 2017</a></li>
   <li>Florence: Interviewing volunteers for asylum seekers</li>
-  <li>Transitland Internship</li>
+  <li><a href="https://medium.com/postzen/analyzing-historical-transit-service-gtfs-publishing-practices-in-transitland-3eb9d63e9ae7">Transitland Internship 2017</a></li>
 </ul>
 </p>
 <p>
@@ -84,7 +97,7 @@ If you’re interested in talking about any of my work, feel free to email me at
 </div>
 
 <!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
 <script>
 // Script to open and close sidebar
