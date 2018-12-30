@@ -1,258 +1,110 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8' />
-    <title></title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-        h1 {
-            color: gray;
-            font-family: Helvetica;
-            font-size: 100%;
-        }
-        
-        h2 {
-            color: black; 
-            font-family: Helvetica;
-            font-size: 150%;
-        }
-        
-    </style>
-</head>
+<html lang="en">
+<title>Chris Phan - Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Inconsolata|Abril+Fatface|Source+Code+Pro|Rubik">
+<style>
+h1 {font-family: Inconsolata}
+
+body, h2,h3,h4,h5 {font-family: "Rubik", sans-serif}
+/*body {font-family: "Source+Code+Pro"}*/
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+
 <body>
 
-<style>
-    .mapboxgl-popup {
-        max-width: 400px;
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    }
-    
-    #features {
-        position: absolute;
-        top: 250px;
-        right: 0;
-        bottom: 0;
-        width: 500px;
-        overflow: scroll;
-        background: rgba(255, 255, 255, 0.8);
-        padding-right: 20px;
-        padding-left: 20px;
-        border:4px solid #FFFFFF;
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Chris<br>Phan</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <center><img src= "https://ibb.co/RCpY5xR"></center>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="https://drive.google.com/file/d/1B66-3OGtPPRt5fSCz316IopnkeDHygqz/view?usp=sharing onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Resume</a> 
+    <a href="https://www.linkedin.com/in/christine-phan-b624a3b0/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">LinkedIn</a> 
+    <a href="https://twitter.com/thecxphan" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Twitter</a> 
+  </div>
+</nav>
 
-    }   
-</style>
-<div id='map'></div>
-<pre id='features'></pre>
-    
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Chris Phan</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Chris Phan</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>About Me</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+    </div>
+    <p>
+    Hi there! I’m Chris Phan, a computer scientist, data analyst, and urbanist based on the SF Bay Area who spends my time contributing to ways to make spaces, communities and environments equitable and livable for all, especially through the lens of technology, data and research. </p>
+
+    <p>
+This past summer, I worked at <a href ="https://www.rmi.org/"> Rocky Mountain Institute</a> in Basalt, Colorado as a research associate. Using my prior transportation background, I developed a city transportation interactive model to assist with the <a href = "https://rmi.org/our-work/global-energy-transitions/india-program/solutions-workshop/pune-solutions-workshop/">Pune Solutions Workshop</a> that the <a href="https://www.rmi.org/our-work/global-energy-transitions/india-program/">India Mobility Team</a> co-hosted with <a href = "https://www.niti.gov.in/">NITI Aayog</a> in October 2018. This model drew from prior work at RMI, data on India’s existing urban transportation environment, and predictions on population growth rate, transportation demand, and the evolution of urban density. This model helped target potential transportation solutions by further providing case studies of alternative transportation examples around the world, through the <a href="https://rmi.org/our-work/global-energy-transitions/india-program/handbook-mobility-solutions-for-indian-cities/">City Handbook </a>, which I also researched and assisted in writing. </p> 
+<p>
+I’ve spent more of my time researching urbanism and global challenges in various locations, such as 
+<ul>
+  <li>The Urban Institute: Center for International Governance and Development</li>
+  <li>Hong Kong: Human Cities Initiative 2017</li>
+  <li>Florence: Interviewing volunteers for asylum seekers</li>
+  <li>Transitland Internship</li>
+</ul>
+</p>
+<p>
+In addition to my work experience, I also am in leadership for <a href = "https://www.facebook.com/lgcydance/">Legacy Dance</a>, a competitive dance team, am involved in the Asian American community at Stanford University, through <a href="http://aasa.stanford.edu/lts.html">Listen to the Silence</a> and <a href = "http://pasu.stanford.edu/">Pilipino American Student Union</a>, and have led a service learning trip through the Alternative Break @ Stanford program on housing rights in the Bay Area. 
+</p>
+<p>
+If you’re interested in talking about any of my work, feel free to email me at cxphan [at] stanford [dot] edu.  
+</p>
+    <div class="w3-half">
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiY3hwaGFuIiwiYSI6ImNpemJ6czRmeTE0aGYycXA5bjZvaWI3eGQifQ.KLTC3DWWhYnYcrp3nql-Sw';
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
 
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/satellite-streets-v9', 
-    center: [-122.4194, 37.77], // starting position, San Francisco
-    zoom: 13 // starting zoom
-});
-
-map.on('load', function () {
-
-    // Add a layer showing the places.
-    map.addLayer({
-        "id": "places",
-        "type": "symbol",
-        "source": {
-            "type": "geojson",
-            "data": {
-                "type": "FeatureCollection",
-                "features": [{
-                  "type": "Feature",
-                  "properties": {
-                    "place_name": "19th St, San Francisco, California 94110, United States",
-                    "MEMO": "TIS",
-                    "Significant_Impact": "No",
-                    "Consultant": "CHS Consulting Group",
-                    "Recommended_Improvement_Measures": "",
-                    "Recommended_Mitigation_Measures": "",
-                    "caseno": "2015-001314ENV"
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -122.42584,
-                      37.759839
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "0d8a3e5b17dd26efc63b5e516e298490"
-                },
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "place_name": "70 Pier, San Francisco, California 94111, United States",
-                    "MEMO": "TIS",
-                    "Significant_Impact": "Yes",
-                    "Consultant": "Fehr&Peers",
-                    "Recommended_Mitigation_Measures": "Mitigation Measure TR-2: Improve Pedestrian Facilities at Adjacent Streets to Project As part of Project construction, install ADA curb ramps, continental crosswalks, pedestrian signals and/or other pedestrian safety solutions at the intersection of 22nd Street and Illinois Street and the intersection of 20th Street and Illinois Street and widen the sidewalk between 22nd Street and 20th Street on the east side of Illinois Street to ten feet, minimum. The relocation of obstructions such as fire hydrants and power poles should be considered (if feasible) to ensure an accessible path of travel is provided to and from the Project.\"",
-                    "Recommended_Improvement_Measures": "",
-                    "caseno": "2014-001272ENV"
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -122.392977,
-                      37.794058
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "37ab22d4fd8aec4b0f8f4cb5cd940526"
-                },
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "place_name": "302 Silver Ave, San Francisco, California 94112, United States",
-                    "MEMO": "TIS",
-                    "Consultant": "ESA",
-                    "Recommended_Improvement_Measures": "",
-                    "Recommended_Mitigation_Measures": "",
-                    "Significant_Impact": "No",
-                    "caseno": "2011.1323!"
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -122.430561,
-                      37.727645
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "591eaaf9fc65292d592a694a7ed9952b"
-                },
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "place_name": "1699 Market St, San Francisco, CA 94103",
-                    "Consultant": "Adavant Consulting",
-                    "MEMO": "TIS",
-                    "Recommended_Improvement_Measures": "",
-                    "Recommended_Mitigation_Measures": "",
-                    "Significant_Impact": "No",
-                    "caseno": "2014.0484!"
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -122.421878,
-                      37.772236
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "94d849431c8a4f84281ad540e7fae98d"
-                },
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "place_name": "1515 S Van Ness Ave, San Francisco, California 94110, United States",
-                    "MEMO": "TIS",
-                    "Significant_Impact": "No ",
-                    "Consultant": "Fehr & Peers",
-                    "Recommended_Improvement_Measures": "\"Improvement Measure TR-2: Queue Abatement Conditions of Approval The owner/operator of the off-street parking facility shall ensure that recurring vehicle queues do not occur on the public right-of-way. A vehicle queue is defined as one or more vehicles (destined for the parking facility) blocking any portion of any public street, alley or sidewalk for a consecutive period of three minutes or longer on a daily or weekly basis. If a recurring queue occurs, the owner/operator of the parking facility shall employ abatement methods as needed to abate the queue. Suggested abatement methods include but are not limited to the following: redesign of facility to improve vehicle circulation and/or on-site queue capacity; employment of parking attendants; use of valet parking or other space-efficient parking techniques; use of off-site parking facilities or shared parking with nearby uses; use of parking occupancy sensors and signage directing drivers to available spaces; or travel demand management strategies such as additional bicycle parking. If the Planning Director, or his or her designee, suspects that a recurring queue is present, the Planning Department shall notify the property owner in writing. Upon request, the owner/operator shall hire a qualified transportation consultant to evaluate the conditions at the site for no less than seven days. The consultant shall prepare a monitoring report to be submitted to the Planning Department for review. If the Planning Department determines that a recurring queue does exist, the facility owner/operator shall have 90 days from the date of the written determination to abate the queue.\"",
-                    "Recommended_Mitigation_Measures": "",
-                    "caseno": "2014.1020E"
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -122.415421,
-                      37.748879
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "e8a0fc83b657da61f13d82ff64c41ebf"
-                },
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "place_name": "1601 Mission St, San Francisco, California 94103, United States",
-                    "Consultant": "CHS Consulting Group",
-                    "MEMO": "TIS",
-                    "Recommended_Improvement_Measures": "",
-                    "Recommended_Mitigation_Measures": "",
-                    "Significant_Impact": "No",
-                    "caseno": "2014.1121E"
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -122.418785,
-                      37.772091
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "eb30e92b8912405b4dbbeb6f4ca6990d"
-                },
-                {
-                  "type": "Feature",
-                  "properties": {
-                    "place_name": "1066 Market St, San Francisco, California 94103, United States",
-                    "Consultant": "CHS Consulting Group",
-                    "MEMO": "TIS",
-                    "Recommended_Improvement_Measures": "",
-                    "Recommended_Mitigation_Measures": "",
-                    "Significant_Impact": "No",
-                    "caseno": "2013.1753!"
-                  },
-                  "geometry": {
-                    "coordinates": [
-                      -122.41142,
-                      37.781351
-                    ],
-                    "type": "Point"
-                  },
-                  "id": "f9ae5e69f4dc730efec957e3932cbaa6"
-                }
-              ]
-            }
-        },
-        "layout": {
-            "icon-image": "circle-15",
-            "icon-allow-overlap": true
-        }
-    });
-});
-
-
-// When a click event occurs near a place, open a popup at the location of
-// the feature, with description HTML from its properties.
-map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['places'] });
-
-    if (!features.length) {
-        return;
-    }
-
-    var feature = features[0];
-    document.getElementById('features').innerHTML = 
-        '<h2><b>Transportation Projects</b></h2>' +
-        '<h1><b>Case Number:</b></h1>' + feature.properties.caseno + '<br>' + 
-        '<h1><b>Street Name:</b></h1>' + feature.properties.place_name + '<br>' + 
-        '<h1><b>Consultant:</b></h1>' + feature.properties.Consultant + '<br>' + 
-        '<h1><b>MEMO:</b></h1>' + feature.properties.MEMO + '<br>'+
-        '<h1><b>Recommended Improvement Measures:</b></h1>' + feature.properties.Recommended_Improvement_Measures + '<br>' +
-        '<h1><b>Recommended Mitigation Measures:</b></h1>' + feature.properties.Recommended_Mitigation_Measures + '<br>'+
-        '<h1><b>Significant Impact:</h1></b>' + feature.properties.Significant_Impact + '<br>';
-    
-    // Populate the popup and set its coordinates
-    // based on the feature found.
-    var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.properties.caseno)
-        .addTo(map);
-});
-
-// Use the same approach as above to indicate that the symbols are clickable
-// by changing the cursor style to 'pointer'.
-map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['places'] });
-    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
-});
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 </script>
 
 </body>
